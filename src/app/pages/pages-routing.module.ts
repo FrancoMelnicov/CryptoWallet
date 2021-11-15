@@ -17,9 +17,14 @@ const routes: Routes = [
             {path: '', redirectTo: '/home', pathMatch: 'full'},
             {path: 'list-wallets', component: ListWalletsComponent},
             {path: 'home', component: HomeComponent},
-            {path: 'wallet', component: WalletComponent},
-            {path: 'wallet/buy', component: BuyComponent},
-            {path: 'wallet/sell', component: SellComponent}
+            {
+                path: 'wallet', 
+                component: WalletComponent,
+                children: [
+                    {path: 'buy', component: BuyComponent},
+                    {path: 'sell', component: SellComponent}
+                ]
+            },
         ]
     }
 ];

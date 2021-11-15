@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoingeckoService } from '../services/coingecko.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public listCryptos: Array<any> = [];
+
+  constructor(private _coinGecko: CoingeckoService) { }
 
   ngOnInit(): void {
+    this._coinGecko.getFirstFiveCoins().subscribe(
+      data => {
+        this.listCryptos = data
+      }
+    )
   }
 
 }

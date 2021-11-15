@@ -11,23 +11,28 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ListWalletsComponent } from './list-wallets/list-wallets.component';
 import { PagesComponent } from './pages.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     ListWalletsComponent,
-    PagesComponent
+    WalletComponent,
+    PagesComponent,
   ],
   exports: [
     HomeComponent,
     ListWalletsComponent,
+    WalletComponent,
     PagesComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }
