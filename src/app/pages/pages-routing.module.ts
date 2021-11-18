@@ -18,7 +18,7 @@ const routes: Routes = [
             {path: 'list-wallets', component: ListWalletsComponent},
             {path: 'home', component: HomeComponent},
             {
-                path: 'wallet', 
+                path: 'wallet/:id', 
                 component: WalletComponent,
                 children: [
                     {path: 'buy', component: BuyComponent},

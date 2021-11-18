@@ -1,5 +1,8 @@
-<p>home works!</p>
-
-<ul>
-    <li *ngFor="let crypto of listCryptos">{{crypto.id}} - $ {{crypto.current_price}}</li>
-</ul>
+<div class="row justify-content-center">
+    <div class="col col-md-6">
+        <h3 class="text-center animate__animated animate__fadeInDown">Principales Cryptomonedas</h3>
+        <ul class="listCrypto">
+            <li class="animate__animated animate__fadeInDown" *ngFor="let crypto of listCryptos">{{crypto.id}} - $ {{crypto.current_price}}</li>
+        </ul>
+    </div>
+</div>

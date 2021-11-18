@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._coinGecko.getFirstFiveCoins().subscribe(
       data => {
-        this.listCryptos = data
+        this.listCryptos = data;
       }
     )
   }

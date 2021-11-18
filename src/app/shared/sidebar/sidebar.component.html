@@ -3,7 +3,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">CryptoWallet</a>
+      <a class="navbar-brand" [routerLink]="['/home']">CryptoWallet</a>
       <div class="offcanvas offcanvas-start" style="width: 300px;" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -12,10 +12,10 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" data-bs-toggle="collapse"data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><b>Home</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Wallets</a>
+              <a class="nav-link" [routerLink]="['/list-wallets']" routerLinkActive="active" data-bs-toggle="collapse" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"><b>Wallets</b></a>
             </li>
           </ul>
         </div>

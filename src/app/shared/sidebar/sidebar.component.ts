@@ -12,4 +12,11 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  hideSideBar(){
+    let navbar = document.querySelector('.offcanvas')!;
+    navbar.classList.remove('show');
+    let backdrop = document.querySelector('.offcanvas-backdrop')!;
+    backdrop.remove();
+    console.log(navbar)
+  }
 }
