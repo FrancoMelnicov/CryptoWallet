@@ -13,6 +13,7 @@ import { ListWalletsComponent } from './list-wallets/list-wallets.component';
 import { PagesComponent } from './pages.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     SharedModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class PagesModule { }

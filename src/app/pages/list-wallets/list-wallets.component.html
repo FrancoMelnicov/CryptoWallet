@@ -7,12 +7,16 @@
     </div>
     <div class="listWallets mt-5">
         <h3 class="text-center">Tus billeteras</h3>
-        <div class="wallets animate__animated animate__fadeInDown">
-            <div *ngIf="listWallet.length == 0" class="notWallets col col-12 mt-5">
+        <div class="wallets animate__animated animate__fadeInDown d-flex flex-wrap justify-content-center">
+            <div *ngIf="listWallet.length == 0" class="notWallets col col-12 m-5">
                 <h5 class="text-center" style="color: grey;">No tienes billeteras creadas</h5>
             </div>
-            <div class="wallet col col-12 mt-5 animate__animated animate__fadeInDown">
-                Soy una wallet
+            <div class="wallet col col-12 col-md-8 m-2 p-2 animate__animated animate__fadeInDown d-flex flex-wrap justify-content-between" *ngFor="let wallet of listWallet">
+                <p>{{wallet.name}}</p>
+                <div class="d-flex flex-wrap justify-content-between align-middle">
+                    <p>$ {{wallet.total}}</p>
+                    <button type="button" class="btn btn-secondary">Ver</button>
+                </div>
             </div>
         </div>
     </div>
@@ -28,11 +32,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <input type="email" class="form-control mt-3 mb-3" id="exampleFormControlInput1" placeholder="Nombre de la billetera">
+            <input type="email" class="form-control mt-3 mb-3" id="exampleFormControlInput1" placeholder="Nombre de la billetera" name="nameWallet" [(ngModel)]="nameWallet">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="createWallet()">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" (click)="createWallet()">Crear</button>
         </div>
       </div>
     </div>
